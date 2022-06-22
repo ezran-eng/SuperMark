@@ -1,37 +1,32 @@
 ## Sistema de Gestión Supermark
 
-You can use the [editor on GitHub](https://github.com/ezran-eng/SuperMark/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Supermark es un supermercado minorista en expansión que atiende las necesidades hogareñas de su comunidad, está abierto desde las 8:00 a.m. hasta las 20:00 hs, hace envíos a domicilios y a los clientes regulares se les provee una tarjeta de descuento. La única manera de realizar una compra es de forma presencial provocando esperas muy largas para los clientes en la caja en determinadas horas del día.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Problemática
 
-### Markdown
+El dueño de Supermark nos planteó la necesidad de tener una plataforma donde publicar sus productos, gestionar y premiar a los usuarios que se registren en la aplicación, con la intención de disminuir la saturación de las colas sin perder clientes.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Solución
 
-```markdown
-Syntax highlighted code block
+La solución que se le puede brindar al cliente es desarrollar los siguiente subsistemas.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+Para el cliente:
+Registrarse.
+Iniciar sesión.
+Seleccionar productos
+ver  listado de productos seleccionados.
+Autorizar la compra de los productos seleccionados
 
-1. Numbered
-2. List
+Para la Administración:
+Cargar productos a la aplicación
+Modificar los datos de los productos cargados
+Ver todos los usuarios que realizaron una compra
+Ver listado de productos seleccionados por el usuario
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+### Consideraciones
+Controlar el stock de productos.
+No se puede seleccionar un producto con stock 0
+Los usuarios pueden seleccionar hasta 30 artículos.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ezran-eng/SuperMark/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
