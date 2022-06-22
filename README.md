@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Sistema de Gestión Supermark
 
 You can use the [editor on GitHub](https://github.com/ezran-eng/SuperMark/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
