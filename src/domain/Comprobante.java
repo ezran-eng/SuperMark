@@ -9,7 +9,8 @@ public class Comprobante {
     private char tipo;
     private Date fecha;
     private HashMap<Integer, Detalle> detalles;
-    
+
+    //Constructor
     public Comprobante(int id, double total, char tipo, Date fecha) {
         this.id = id;
         this.total = total;
