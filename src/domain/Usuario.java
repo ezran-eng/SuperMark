@@ -4,19 +4,21 @@ public class Usuario {
     private int id;
     private String nombre;
     private String apellido;
+    private String contrasenia;
     private int dni;
     private Domicilio domicilio;
 
-    public Usuario(int id, String nombre, String apellido, int dni, Domicilio domicilio) {
-        this(id, nombre, apellido, dni, domicilio.getCalle(), domicilio.getNumero(), domicilio.getDepNumero(), domicilio.getPiso());
+    public Usuario(int id, String nombre, String apellido, String contrasenia, int dni, Domicilio domicilio) {
+        this(id, nombre, apellido, contrasenia, dni, domicilio.getCalle(), domicilio.getNumero(), domicilio.getDepNumero(), domicilio.getPiso(), domicilio.getDescripcion());
     }
 
-    public Usuario(int id, String nombre, String apellido, int dni, String calle, int numero, int depNumero, int piso) {
+    public Usuario(int id, String nombre, String apellido, String contrasenia, int dni, String calle, int numero, int depNumero, int piso, String descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        this.domicilio = new Domicilio(calle, numero, depNumero, piso);
+        this.contrasenia = contrasenia;
+        this.domicilio = new Domicilio(calle, numero, depNumero, piso, descripcion);
     }
 
     public int getId() {
@@ -59,12 +61,21 @@ public class Usuario {
         this.domicilio = domicilio;
     }
 
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
+                ", contrasenia='" + contrasenia + '\'' +
                 ", dni=" + dni +
                 ", domicilio=" + domicilio +
                 '}';

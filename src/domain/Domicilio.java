@@ -5,12 +5,22 @@ public class Domicilio {
     private int numero;
     private int depNumero;
     private int piso;
+    private String descripcion;
 
-    public Domicilio(String calle, int numero, int depNumero, int piso) {
+    public Domicilio(String calle, int numero, int depNumero, int piso, String descripcion) {
         this.calle = calle;
         this.numero = numero;
         this.depNumero = depNumero;
         this.piso = piso;
+        this.descripcion = descripcion;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getCalle() {
@@ -52,6 +62,7 @@ public class Domicilio {
                 ", numero=" + numero +
                 ", depNumero=" + depNumero +
                 ", piso=" + piso +
+                ", descripcion='" + descripcion + '\'' +
                 '}';
     }
 }
