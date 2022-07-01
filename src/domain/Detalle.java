@@ -10,7 +10,6 @@ public class Detalle {
     public Detalle(Producto descripcion, int cantidad, double descuento) {
         this(descripcion.getId(), descripcion.getNombre(), descripcion.getMarca(), descripcion.getFechaVencimiento(), descripcion.getPrecio(), descripcion.getStock(), cantidad, descuento);
     }
-
     public Detalle(int id, String nombre, String marca, Date fechaVencimiento, double precio, int stock, int cantidad, double descuento) {
         this.descripcion = new Producto(id, nombre, marca, fechaVencimiento, precio, stock);
         this.cantidad = cantidad;

@@ -5,13 +5,22 @@ public class Domicilio {
     private int numero;
     private int depNumero;
     private int piso;
+    private Localidad localidad;
     private String descripcion;
 
-    public Domicilio(String calle, int numero, int depNumero, int piso, String descripcion) {
+    public Domicilio(){
+        this("no hay calle", 0, 0, 0, new Localidad(), "no hay descripcion");
+    }
+    public Domicilio(String calle, int numero, int depNumero, int piso, Localidad localidad, String descripcion) {
+        this(calle, numero, depNumero, piso, localidad.getProvincia(), localidad.getDepartamento(), localidad.getCiudad(), descripcion);
+    }
+
+    public Domicilio(String calle, int numero, int depNumero, int piso, String provincia, String departamento, String ciudad, String descripcion) {
         this.calle = calle;
         this.numero = numero;
         this.depNumero = depNumero;
         this.piso = piso;
+        this.localidad = new Localidad(provincia, departamento, ciudad);
         this.descripcion = descripcion;
     }
 
@@ -55,6 +64,14 @@ public class Domicilio {
         this.piso = piso;
     }
 
+    public Localidad getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(Localidad localidad) {
+        this.localidad = localidad;
+    }
+
     @Override
     public String toString() {
         return "Domicilio{" +
@@ -62,6 +79,7 @@ public class Domicilio {
                 ", numero=" + numero +
                 ", depNumero=" + depNumero +
                 ", piso=" + piso +
+                ", localidad=" + localidad +
                 ", descripcion='" + descripcion + '\'' +
                 '}';
     }
