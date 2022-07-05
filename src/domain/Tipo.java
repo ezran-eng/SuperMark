@@ -1,20 +1,22 @@
 package domain;
 
 public class Tipo {
+    private Integer id;
     String descripcion;
     Descuento descuento;
 
     //Constructores
-    public Tipo(){
-        this("no hay descripcion", new Descuento());
+    public Tipo(Integer id){
+        this(id,"no hay descripcion", new Descuento(id));
     }
 
-    public Tipo(String descripcion, Descuento descuento) {
-        this(descripcion, descuento.getPorcentaje(), descuento.getDia());
+    public Tipo(Integer id,String descripcion, Descuento descuento) {
+        this(id, descripcion, descuento.getPorcentaje(), descuento.getDia());
     }
-    public Tipo(String descripcion, float porcentaje, String dia) {
+    public Tipo(Integer id, String descripcion, float porcentaje, String dia) {
+        this.id = id;
         this.descripcion = descripcion;
-        this.descuento = new Descuento(porcentaje, dia);
+        this.descuento = new Descuento(id, porcentaje, dia);
     }
 
     public String getDescripcion() {
@@ -33,10 +35,19 @@ public class Tipo {
         this.descuento = descuento;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Tipo{" +
-                "descripcion='" + descripcion + '\'' +
+                "id=" + id +
+                ", descripcion='" + descripcion + '\'' +
                 ", descuento=" + descuento +
                 '}';
     }

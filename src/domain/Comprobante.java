@@ -1,30 +1,19 @@
 package domain;
-
-import java.util.Date;
-import java.util.HashMap;
+import java.sql.Timestamp;
 
 public class Comprobante {
-    private int id;
     private double total;
-    private char tipo;
-    private Date fecha;
-    private HashMap<Integer, Detalle> detalles;
+    private Timestamp fecha;
+    private Usuario destinatario;
+    private TarjetaCredito tarjeta;
+
 
     //Constructor
-    public Comprobante(int id, double total, char tipo, Date fecha) {
-        this.id = id;
+    public Comprobante( double total, Timestamp fecha, Usuario destinatario, TarjetaCredito tarjeta) {
         this.total = total;
-        this.tipo = tipo;
         this.fecha = fecha;
-        this.detalles = new HashMap<>();
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.destinatario = destinatario;
+        this.tarjeta = tarjeta;
     }
 
     public double getTotal() {
@@ -35,38 +24,27 @@ public class Comprobante {
         this.total = total;
     }
 
-    public char getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(char tipo) {
-        this.tipo = tipo;
-    }
-
-    public Date getFecha() {
+    public Timestamp getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(Timestamp fecha) {
         this.fecha = fecha;
     }
 
-    public HashMap<Integer, Detalle> getDetalles() {
-        return detalles;
+    public Usuario getDestinatario() {
+        return destinatario;
     }
 
-    public void setDetalles(HashMap<Integer, Detalle> detalles) {
-        this.detalles = detalles;
+    public void setDestinatario(Usuario destinatario) {
+        this.destinatario = destinatario;
     }
 
-    @Override
-    public String toString() {
-        return "Comprobante{" +
-                "id=" + id +
-                ", total=" + total +
-                ", tipo=" + tipo +
-                ", fecha=" + fecha +
-                ", detalles=" + detalles +
-                '}';
+    public TarjetaCredito getTarjeta() {
+        return tarjeta;
+    }
+
+    public void setTarjeta(TarjetaCredito tarjeta) {
+        this.tarjeta = tarjeta;
     }
 }

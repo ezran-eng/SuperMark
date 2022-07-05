@@ -9,8 +9,8 @@ public class Usuario {
     private int dni;
     private Domicilio domicilio;
 
-    public Usuario() {
-        this(0, "", "","", "", 0, new Domicilio());
+    public Usuario(Integer id) {
+        this(0, "", "","", "", 0, new Domicilio(id));
     }
 
     public Usuario(int id, String nombre, String apellido, String email, String contrasenia, int dni, Domicilio domicilio) {
@@ -24,7 +24,7 @@ public class Usuario {
         this.email = email;
         this.dni = dni;
         this.contrasenia = contrasenia;
-        this.domicilio = new Domicilio(calle, numero, depNumero, piso, descripcion, provincia, departamento, ciudad);
+        this.domicilio = new Domicilio(id,calle, numero, depNumero, piso, descripcion, provincia, departamento, ciudad);
     }
 
     public int getId() {

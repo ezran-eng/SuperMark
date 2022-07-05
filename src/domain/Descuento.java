@@ -3,14 +3,24 @@ package domain;
 public class Descuento {
     private float porcentaje;
     private String dia;
+    private Integer id;
 
-    public Descuento(){
-        this(0, "no hay dia");
+    public Descuento(Integer id){
+        this(id,0, "no hay dia");
     }
 
-    public Descuento(float porcentaje, String dia) {
+    public Descuento(Integer id, float porcentaje, String dia) {
+        this.id = id;
         this.porcentaje = porcentaje;
         this.dia = dia;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public float getPorcentaje() {
@@ -34,6 +44,7 @@ public class Descuento {
         return "Descuento{" +
                 "porcentaje=" + porcentaje +
                 ", dia='" + dia + '\'' +
+                ", id=" + id +
                 '}';
     }
 }

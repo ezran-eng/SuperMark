@@ -10,10 +10,6 @@ public class TarjetaCredito {
     private Usuario usuario;
     private Date fechaCaducidad;
 
-public TarjetaCredito(){
-    this(0, "no hay banco", 0, 0, new Usuario(), new Date(0));
-}
-
     public TarjetaCredito(int numero, String banco, double balance, double limite, Usuario usuario, Date fechaCaducidad) {
         this(numero, banco, balance, limite, usuario.getId(), usuario.getNombre(), usuario.getApellido(), usuario.getEmail(), usuario.getContrasenia(), usuario.getDni(), usuario.getDomicilio().getCalle(), usuario.getDomicilio().getDepNumero(), usuario.getDomicilio().getPiso(), usuario.getDomicilio().getLocalidad().getProvincia(), usuario.getDomicilio().getLocalidad().getDepartamento(), usuario.getDomicilio().getLocalidad().getCiudad(), usuario.getDomicilio().getDescripcion(), fechaCaducidad);
     }

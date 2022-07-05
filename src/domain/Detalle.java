@@ -3,25 +3,22 @@ package domain;
 import java.util.Date;
 
 public class Detalle {
-    private Producto descripcion;
+    private Producto producto;
+    private Comprobante comprobante;
     private int cantidad;
-    private double descuento;
+    private int id;
 
-    public Detalle(Producto descripcion, int cantidad, double descuento) {
-        this(descripcion.getId(), descripcion.getNombre(), descripcion.getMarca(), descripcion.getFechaVencimiento(), descripcion.getPrecio(), descripcion.getStock(), cantidad, descuento);
-    }
-    public Detalle(int id, String nombre, String marca, Date fechaVencimiento, double precio, int stock, int cantidad, double descuento) {
-        this.descripcion = new Producto(id, nombre, marca, fechaVencimiento, precio, stock);
-        this.cantidad = cantidad;
-        this.descuento = descuento;
+    public Detalle(Producto producto, Comprobante comprobante, int cantidad) {
+        this.producto = producto;
+        this.comprobante = comprobante;
     }
 
-    public Producto getDescripcion() {
-        return descripcion;
+    public Producto getProducto() {
+        return producto;
     }
 
-    public void setDescripcion(Producto descripcion) {
-        this.descripcion = descripcion;
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 
     public int getCantidad() {
@@ -32,20 +29,29 @@ public class Detalle {
         this.cantidad = cantidad;
     }
 
-    public double getDescuento() {
-        return descuento;
+    public Comprobante getComprobante() {
+        return comprobante;
     }
 
-    public void setDescuento(double descuento) {
-        this.descuento = descuento;
+    public void setComprobante(Comprobante comprobante) {
+        this.comprobante = comprobante;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "Detalle{" +
-                "descripcion=" + descripcion +
+                "producto=" + producto +
+                ", comprobante=" + comprobante +
                 ", cantidad=" + cantidad +
-                ", descuento=" + descuento +
+                ", id=" + id +
                 '}';
     }
 }
