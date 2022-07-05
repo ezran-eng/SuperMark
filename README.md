@@ -30,4 +30,4 @@ Controlar el stock de productos.
 No se puede seleccionar un producto con stock 0
 Los usuarios pueden seleccionar hasta 30 artículos.
 
-![WhatsApp Image 2022-06-22 at 12 29 45 AM]([https://user-images.githubusercontent.com/62077267/177408598-ed1a047c-de16-4b26-97e8-f60b85b1be89.png])
+![superMark](https://user-images.githubusercontent.com/62077267/177408598-ed1a047c-de16-4b26-97e8-f60b85b1be89.png)
