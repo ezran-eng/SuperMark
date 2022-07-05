@@ -31,3 +31,6 @@ No se puede seleccionar un producto con stock 0
 Los usuarios pueden seleccionar hasta 30 artículos.
 
 ![superMark](https://user-images.githubusercontent.com/62077267/177408598-ed1a047c-de16-4b26-97e8-f60b85b1be89.png)
+
+### Diagrama Base de Datos
+![superMark](https://user-images.githubusercontent.com/62077267/177411018-fb2b54ef-300d-4172-a87e-4cbcd8bf2849.png)
