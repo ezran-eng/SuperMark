@@ -6,12 +6,15 @@ public class Localidad {
     private String departamento;
     private String ciudad;
 
-    public Localidad(Integer id){
-        this(id,"no hay Provincia","no hay Departamento","no hay ciudad");
+    public Localidad(Integer id) {
+        this.id = id;
+    }
+    public Localidad(){
+        this("no hay Provincia","no hay Departamento","no hay ciudad");
     }
 
-    public Localidad(Integer id,String provincia, String departamento, String ciudad) {
-        this.id = id;
+    public Localidad(String provincia, String departamento, String ciudad) {
+
         this.provincia = provincia;
         this.departamento = departamento;
         this.ciudad = ciudad;

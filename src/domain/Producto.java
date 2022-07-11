@@ -12,7 +12,37 @@ public class Producto {
     private Tipo tipo;
 
     public Producto(Integer id) {
-        this(id,"no hay nombre", "no hay marca", new Date(0), 0, 0, new Tipo(id));
+
+        this.id = id;
+    }
+
+    public Producto(Integer id,Float precio) {
+        super();
+        this.id = id;
+        this.precio = precio;
+    }
+
+    public Producto(Integer id,String nombre,Float precio) {
+        super();
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    public Producto(Integer id,Integer stock) {
+        super();
+        this.id = id;
+        this.stock = stock;
+    }
+
+    public Producto(Integer id, String nombre, String marca, Date fechaVencimiento, Float precio, Integer stock) {
+        super();
+        this.id = id;
+        this.nombre = nombre;
+        this.marca = marca;
+        this.fechaVencimiento = fechaVencimiento;
+        this.precio = precio;
+        this.stock = stock;
     }
 
     public Producto(Integer id,String nombre, String marca, Date fechaVencimiento, double precio, int stock, Tipo tipo) {

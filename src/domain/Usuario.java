@@ -10,21 +10,24 @@ public class Usuario {
     private Domicilio domicilio;
 
     public Usuario(Integer id) {
-        this(0, "", "","", "", 0, new Domicilio(id));
-    }
-
-    public Usuario(int id, String nombre, String apellido, String email, String contrasenia, int dni, Domicilio domicilio) {
-        this(id, nombre, apellido, email, contrasenia, dni, domicilio.getCalle(), domicilio.getNumero(), domicilio.getDepNumero(), domicilio.getPiso(), domicilio.getLocalidad().getProvincia(), domicilio.getLocalidad().getDepartamento(), domicilio.getLocalidad().getCiudad(), domicilio.getDescripcion());
-    }
-
-    public Usuario(int id, String nombre, String apellido, String email, String contrasenia, int dni, String calle, int numero, int depNumero, int piso, String provincia, String departamento, String ciudad, String descripcion) {
         this.id = id;
+    }
+
+    public Usuario() {
+        this("", "","", "", 0, new Domicilio());
+    }
+
+    public Usuario(String nombre, String apellido, String email, String contrasenia, int dni, Domicilio domicilio) {
+        this(nombre, apellido, email, contrasenia, dni, domicilio.getCalle(), domicilio.getNumero(), domicilio.getDepNumero(), domicilio.getPiso(), domicilio.getLocalidad().getProvincia(), domicilio.getLocalidad().getDepartamento(), domicilio.getLocalidad().getCiudad(), domicilio.getDescripcion());
+    }
+
+    public Usuario(String nombre, String apellido, String email, String contrasenia, int dni, String calle, int numero, int depNumero, int piso, String provincia, String departamento, String ciudad, String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.dni = dni;
         this.contrasenia = contrasenia;
-        this.domicilio = new Domicilio(id,calle, numero, depNumero, piso, descripcion, provincia, departamento, ciudad);
+        this.domicilio = new Domicilio(calle, numero, depNumero, piso, descripcion, provincia, departamento, ciudad);
     }
 
     public int getId() {
