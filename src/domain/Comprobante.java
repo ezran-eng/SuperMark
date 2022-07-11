@@ -2,6 +2,7 @@ package domain;
 import java.sql.Timestamp;
 
 public class Comprobante {
+    private Integer id;
     private double total;
     private Timestamp fecha;
     private Usuario destinatario;
@@ -46,5 +47,24 @@ public class Comprobante {
 
     public void setTarjeta(TarjetaCredito tarjeta) {
         this.tarjeta = tarjeta;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Comprobante{" +
+                "id=" + id +
+                ", total=" + total +
+                ", fecha=" + fecha +
+                ", destinatario=" + destinatario +
+                ", tarjeta=" + tarjeta +
+                '}';
     }
 }

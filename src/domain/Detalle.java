@@ -5,10 +5,15 @@ import java.util.Date;
 public class Detalle {
     private Producto producto;
     private Comprobante comprobante;
-    private int cantidad;
+    private Integer cantidad;
     private int id;
 
-    public Detalle(Producto producto, Comprobante comprobante, int cantidad) {
+    public Detalle(Producto producto, Integer cantidad) {
+        super();
+        this.producto = producto;
+        this.cantidad = cantidad;
+    }
+    public Detalle(Producto producto, Comprobante comprobante, Integer cantidad) {
         this.producto = producto;
         this.comprobante = comprobante;
     }

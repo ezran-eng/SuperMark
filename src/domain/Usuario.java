@@ -9,6 +9,10 @@ public class Usuario {
     private int dni;
     private Domicilio domicilio;
 
+    public Usuario(Integer id) {
+        this.id = id;
+    }
+
     public Usuario() {
         this("", "","", "", 0, new Domicilio());
     }

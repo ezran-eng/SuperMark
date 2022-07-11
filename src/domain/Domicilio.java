@@ -9,8 +9,19 @@ public class Domicilio {
     private int piso;
     private String descripcion;
 
+    public Domicilio(Integer id) {
+        this.id = id;
+    }
+
     public Domicilio(){
       this("", 0, 0,0, new Localidad(),"");
+    }
+    public Domicilio(Integer id, String calle, Integer numero, Integer depNumero, Integer piso) {
+        this.id = id;
+        this.calle = calle;
+        this.numero = numero;
+        this.depNumero = depNumero;
+        this.piso = piso;
     }
 
     public Domicilio(String calle, int numero, int depNumero, int piso, Localidad localidad, String descripcion) {

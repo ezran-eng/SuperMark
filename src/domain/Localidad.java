@@ -6,6 +6,9 @@ public class Localidad {
     private String departamento;
     private String ciudad;
 
+    public Localidad(Integer id) {
+        this.id = id;
+    }
     public Localidad(){
         this("no hay Provincia","no hay Departamento","no hay ciudad");
     }
